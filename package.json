@@ -1,0 +1,23 @@
+{
+  "name": "ld-munkas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=expanded ./assets/sass:./assets/css",
+    "sass-prod": "sass --no-source-map --style=compressed ./assets/sass:./assets/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.2",
+    "isotope-layout": "^3.0.6",
+    "swiper": "^8.4.5"
+  },
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}
