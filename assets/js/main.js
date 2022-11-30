@@ -270,50 +270,6 @@
         },
     });
 
-    var form = document.querySelector("#form-contact");
-    var medium = document.referrer;
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        let headers = new Headers();
-
-        headers.append('Content-Type', 'application/json');
-        headers.append('Accept', 'application/json');
-
-        headers.append('Access-Control-Allow-Origin', 'http://localhost:5500');
-        headers.append('Access-Control-Allow-Credentials', 'true');
-        headers.append('X-API-KEY', 'TOc9NNNACqe3ZK9BqQNJ0ghVz7wJJ9');
-
-        headers.append('GET', 'POST', 'OPTIONS');
-
-        const obj = {
-            "account": {
-                "account_name": document.getElementById("name").value,
-                "phone_office": document.getElementById("phone").value,
-                "email": document.getElementById("email").value,
-                "dich_vu_tu_van": document.getElementById("content").value
-            }
-        };
-        console.log(obj);
-        $.ajax({
-            type: "POST",
-            url: "https://munkas.getflycrm.com/api/v3/accounts/",
-            data: obj,
-            headers: headers,
-            dataType: "json",
-            contentType: 'application/json',
-            success: function(rs) {
-
-                if (rs.error_code === 200) {
-                    // modal_thanks.modal('show');
-                    alert('thanhf coonf');
-                } else if (rs.error_code === 401) {
-                    alert('chiuj');
-                } else
-                    alert('vo day');
-            },
-        });
-    });
     /**
      * Initiate Pure Counter
      */
