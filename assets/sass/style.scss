@@ -1201,6 +1201,7 @@ section {
     }
     iframe {
         width: 100% !important;
+        height: 450px !important;
     }
 }
 
@@ -1277,6 +1278,12 @@ section {
     }
     p {
         margin-top: auto;
+    }
+}
+
+iframe {
+    @include max-width-768 {
+        height: fit-content;
     }
 }
 
