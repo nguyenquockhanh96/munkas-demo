@@ -196,7 +196,6 @@
             let projectIsotope = new Isotope(projectContainer, {
                 itemSelector: ".project-item",
                 filter: ".filter-resort"
-
             });
 
             let projectFilters = select(".project-flters li", true);
@@ -206,7 +205,7 @@
                 ".project-flters li",
                 function(e) {
                     e.preventDefault();
-                    console.log("đây");
+
                     projectFilters.forEach(function(el) {
                         el.classList.remove("filter-active");
                     });
