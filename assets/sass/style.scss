@@ -553,6 +553,10 @@ section {
         padding: 60px 100px 0 100px;
         font-size: 20px;
         color: $color-title;
+        @include max-width-1024 {
+            padding-left: 0;
+            padding-right: 0;
+        }
         h4 {
             font-size: 18px;
             margin-bottom: 0;
@@ -681,6 +685,15 @@ section {
             padding: 50px 5px;
             margin: -50px 8px 0 8px;
         }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 14px;
+            i {
+                margin-right: 10px;
+                color: $color-title;
+            }
+        }
         .icon {
             margin: 0;
             width: 72px;
@@ -705,9 +718,6 @@ section {
             margin: 10px 0 15px 0;
             font-size: 20px;
             transition: ease-in-out 0.3s;
-            @include min-width-1024 {
-                height: 65px;
-            }
             @include min-1200-max-1440 {
                 font-size: 16px;
             }
@@ -746,6 +756,10 @@ section {
         }
     }
     .service-item {
+        height: calc(100% - 200px);
+        @include min-1200-max-1440 {
+            height: calc(100% - 249px);
+        }
         &:hover {
             .details {
                 h3 {
@@ -1346,5 +1360,71 @@ section {
     height: 100%;
     #getfly-form {
         max-width: 100% !important;
+    }
+}
+
+#register {
+    iframe {
+        height: 450px;
+    }
+}
+
+.popup {
+    .modal {
+        &.show {
+            .modal-dialog {
+                transform: translate(0, 50%);
+                top: 0;
+            }
+        }
+    }
+}
+
+.outstanding {
+    margin-bottom: 60px;
+    &-item {
+        box-shadow: 0 15px 10px -10px rgb(0 0 0 / 50%), 0 1px 4px rgb(0 0 0 / 30%), 0 0 40px rgb(0 0 0 / 10%) inset;
+        border-radius: 18px;
+        padding: 5px 5px 20px 5px;
+        position: relative;
+        &:hover {
+            .img {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        .img {
+            overflow: hidden;
+            border-radius: 18px;
+            img {
+                transition: 0.6s
+            }
+        }
+        .content {
+            padding: 15px;
+            h3 {
+                font-weight: bold;
+                color: $color-title;
+            }
+        }
+        .btn-outstanding {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            background-color: $bg-button-hover;
+            color: #ffffff;
+            padding: 8px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 15px;
+            transform: translate(-50%, 0);
+            border-radius: 50px;
+            &:active {
+                outline: none;
+                background-color: #f4b23a;
+                color: #ffffff;
+            }
+        }
     }
 }
